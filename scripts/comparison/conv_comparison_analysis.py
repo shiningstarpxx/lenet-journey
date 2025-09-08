@@ -35,7 +35,7 @@ class ConvComparisonAnalyzer:
         )
         self.train_loader, self.test_loader = self.data_loader.create_dataloaders()
         
-    def run_complete_analysis(self, model_types=['conv1', 'conv2'], epochs=3, target_digit=7):
+    def run_complete_analysis(self, model_types=['conv1', 'conv2', 'conv3'], epochs=3, target_digit=7):
         """运行完整的对比分析"""
         print("🎯 开始完整的卷积层数对比分析")
         print("=" * 80)

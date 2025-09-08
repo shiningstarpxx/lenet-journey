@@ -52,7 +52,8 @@ class ComparisonTrainer:
         print("=" * 60)
         
         # 创建模型
-        model = get_model(model_type, Config.INPUT_CHANNELS, Config.NUM_CLASSES)
+        input_channels = getattr(self, 'input_channels', Config.INPUT_CHANNELS)
+        model = get_model(model_type, input_channels, Config.NUM_CLASSES)
         model = model.to(self.device)
         
         # 创建优化器和损失函数

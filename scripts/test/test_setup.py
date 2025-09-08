@@ -4,8 +4,13 @@ LeNet-5 项目设置测试脚本
 """
 
 import sys
+import os
 import importlib
 import torch
+
+# 添加项目根目录到Python路径
+project_root = os.path.join(os.path.dirname(__file__), '../..')
+sys.path.insert(0, project_root)
 import numpy as np
 import matplotlib
 matplotlib.use('Agg')  # 使用非交互式后端
